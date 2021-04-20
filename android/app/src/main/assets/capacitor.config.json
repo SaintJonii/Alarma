@@ -1,0 +1,17 @@
+{
+  "appId": "io.ionic.alarm",
+  "appName": "appAlarm",
+  "bundledWebRuntime": false,
+  "linuxAndroidStudioPath": "/snap/bin/android-studio",
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0,
+      "launchAutoHide": true,
+      "androidSpinnerStyle": "large"
+
+    }
+  },
+  "cordova": {}
+}

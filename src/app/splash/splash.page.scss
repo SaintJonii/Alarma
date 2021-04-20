@@ -1,0 +1,13 @@
+ion-content{
+    --background: url(../../assets/background.jpg);
+}
+
+@-webkit-keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
+.container{
+    -webkit-animation:rotate-center .9s ease-in-out both;animation:rotate-center .9s ease-in-out both;
+    height:35%;
+    img{
+        height: 200px;
+        margin-top: 40%;
+    }
+}
