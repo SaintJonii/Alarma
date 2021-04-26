@@ -12,7 +12,7 @@
 
     <ion-card>
       <ion-card-header>
-        <ion-card-subtitle>Validar usuario</ion-card-subtitle>
+        <ion-card-subtitle>Alarma Antirrobo</ion-card-subtitle>
         <ion-card-title>Ingrese sus datos</ion-card-title>
       </ion-card-header>
     
@@ -20,13 +20,14 @@
         <ion-item>
           <ion-label>Usuario: </ion-label>
           <ion-input type="text" [(ngModel)]="user"></ion-input>
-        </ion-item>
+        </ion-item><br>
         <ion-item>
           <ion-label>Contraseña: </ion-label>
           <ion-input type="password" [(ngModel)]="pass"></ion-input>
-        </ion-item> 
+        </ion-item><br>
       </ion-card-content>
-      <ion-button color="primary" expand="block" (click)="login()" >Ingresar</ion-button>
+      <ion-button expand="block" (click)="login()" color="dark" fill="outline">
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>Ingresar</ion-button>
     </ion-card>
 
   </div>
