@@ -8,9 +8,9 @@
     </ion-toolbar>
   </ion-header>
 
-  <div style="height: 60%; display: flex; align-items: center; justify-content: center;">
+  <div style="height: 50%; display: flex; align-items: center; justify-content: center;">
 
-    <ion-card>
+    <ion-card class="card-contain">
       <ion-card-header>
         <ion-card-subtitle>Alarma Antirrobo</ion-card-subtitle>
         <ion-card-title>Ingrese sus datos</ion-card-title>
@@ -19,7 +19,7 @@
       <ion-card-content>
         <form class="form" [formGroup]="loginForm" (ngSubmit)="submit()">
           <ion-item>
-            <ion-label>Usuario: </ion-label>
+            <ion-label>Correo Electrónico:</ion-label>
             <ion-input formControlName="correo" name="correo" type="text" [(ngModel)]="user"></ion-input>
           </ion-item>
           <div *ngFor= "let error of errorMessages.correo">
@@ -28,7 +28,7 @@
             </ng-container>
           </div><br>
           <ion-item>
-            <ion-label>Contraseña: </ion-label>
+            <ion-label>Contraseña:</ion-label>
             <ion-input formControlName="clave" name="clave" type="password" [(ngModel)]="pass"></ion-input>
           </ion-item>
           <div *ngFor= "let error of errorMessages.clave">
