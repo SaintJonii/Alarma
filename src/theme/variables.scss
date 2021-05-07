@@ -284,7 +284,7 @@ ion-toolbar{
 
 .home {
   --background:none;
-  background:url('../assets/fondo.jpg');
+  background:url('../assets/home.png');
    background-size: cover;
   background-position: bottom;
   font-family: 'Gloria Hallelujah', cursive;
@@ -294,7 +294,7 @@ ion-toolbar{
 
 ion-content {
   --background:none;
-  background-image:url('../assets/fondo.jpg');
+  background-image:url('../assets/home.png');
    background-size: block;
   background-position: bottom;
   font-family: 'Gloria Hallelujah', cursive;
@@ -309,9 +309,9 @@ ion-content {
 }
 
 .btnGigante{
-  height: 80%;
+  height: 40%;
   width: 90%;
-  margin: 15% 5% 10% 5%;
+  margin: 30% 5% 10% 5%;
   border-radius: 5px;
   border: 2px solid;
   // font-size: 150%;
@@ -322,7 +322,8 @@ ion-content {
 }
 
 .colorPrincipal{
-  background:#FAB301;
+  background:#F6866E;
+  opacity: 0.959;
   color: #000000;
   border-color: #D2D1D7;
   font-size: 40px;
@@ -330,6 +331,7 @@ ion-content {
 
 .colorSecundario{
   border-color:#D2D1D7;
+  opacity: 0.959;
   color: #000000;
   background: #838285;
   font-size: 60px;
@@ -449,7 +451,8 @@ ion-content {
 }
 
 .colorTerciario{
- background: #0070f7;  
+ background: #0070f7; 
+ opacity: 0.959;
  color: #000000;
  border-color:#D2D1D7; 
 }

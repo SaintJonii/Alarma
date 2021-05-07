@@ -22,6 +22,7 @@ export class AuthService {
       .then(async resp => {
 
           this.auth.currentUser.then(async token => {
+          localStorage.setItem("correo", email);
           this.router.navigateByUrl('home');
         });
       }).catch(function(e) {
