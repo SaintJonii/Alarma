@@ -6,14 +6,12 @@ import { DeviceMotion } from '@ionic-native/device-motion';
 import { DeviceMotionAccelerationData, DeviceMotionAccelerometerOptions } from '@ionic-native/device-motion/ngx';
 
 //audio
-
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
 
 //vibracion
 import { Vibration } from '@ionic-native/vibration/ngx';
 //flash
 import { Flashlight } from '@ionic-native/flashlight/ngx';
-
 import { BarcodeScannerOptions, BarcodeScanner} from "@ionic-native/barcode-scanner/ngx";
 import { AuthService } from '../services/auth.service';
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -93,6 +91,7 @@ export class HomePage implements OnInit {
     this.odin.src = this.caminoAOdin;
     this.odin.volume = 1;
     this.odin.load();
+    this.odin.loop = false;
 
     this.guns = new Audio();
     this.guns.src = this.caminoAGuns;   

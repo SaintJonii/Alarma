@@ -8,13 +8,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
-import { Camera } from '@ionic-native/camera/ngx';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
-import { File } from '@ionic-native/file/ngx';
+
 
 import { Flashlight } from '@ionic-native/flashlight/ngx';
 import { Vibration } from '@ionic-native/vibration/ngx';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+
+import firebase from 'firebase/app';
+firebase.initializeApp(environment.firebase);
 
 
 @NgModule({
@@ -22,8 +24,6 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(environment.firebase)],
   providers: [
-    Camera,
-    File,
     NativeAudio,
     Flashlight,
     Vibration,
