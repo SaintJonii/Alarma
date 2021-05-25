@@ -13,7 +13,6 @@ export class LoginPage implements OnInit {
 
   user: string;
   pass: string;
-  botonAcceso: boolean;
   loginForm = this.formBuider.group({
     correo: ['', 
     [
@@ -50,7 +49,6 @@ export class LoginPage implements OnInit {
   constructor(private auth: AuthService, private formBuider: FormBuilder, private alertController: AlertController) { }
 
   ngOnInit() {
-    this.botonAcceso = true;
   }
 
   async login() {
@@ -62,7 +60,6 @@ export class LoginPage implements OnInit {
 
   accesoRapido() {
     this.limpiarInputs();
-    this.botonAcceso = !this.botonAcceso;
   }
 
   async noValidado() {
@@ -82,7 +79,6 @@ export class LoginPage implements OnInit {
   userSelected(e) {
     this.user = e.correo;
     this.pass = e.clave;
-    this.botonAcceso = !this.botonAcceso;
   }
 
   limpiarInputs(){

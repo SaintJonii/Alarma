@@ -1,22 +1,35 @@
 <ion-card class="card-contain">
   <ion-card-header>
-    <ion-card-sub-title>Panel de acceso rápido</ion-card-sub-title>
-    <ion-card-title>Elija un Usuario</ion-card-title>
+    <ion-card-title>Panel de acceso rápido</ion-card-title>
   </ion-card-header>
 
 
   <ion-card-content>
-    
-    <ion-item>
-      <ion-label>Usuarios</ion-label>
-      <ion-select ok-text="Aceptar" cancel-text="Volver" [disabled]="disabled" (ionChange)="onChange($event)">
-        <div *ngFor="let user of users">
-          <ng-container>
-            <ion-select-option [value]="user.id">{{user.id}} - {{user.perfil}}</ion-select-option>
-          </ng-container>
-        </div>
-      </ion-select>
-    </ion-item>
+   
+      <ion-button  color="dark" expand="block" fill="outline" (click)="accesoRapido()" *ngIf="!showList" [disabled]="!users">
+        <ion-icon name="finger-print-outline" slot="end"></ion-icon>Acceso Rápido
+      </ion-button>
+
+      <ion-segment scrollable (ionChange)="segmentChanged($event)"  *ngIf="showList">
+        <ion-segment-button [value]="users[0].id">
+          <ion-icon name="key-sharp"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button [value]="users[1].id">
+          <ion-icon name="ticket-sharp"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button [value]="users[2].id">
+          <ion-icon name="person-sharp"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button [value]="users[3].id">
+          <ion-icon name="help-circle-sharp"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button [value]="users[4].id">
+          <ion-icon name="bug-sharp"></ion-icon>
+        </ion-segment-button>
+
+      </ion-segment>
+
+
   </ion-card-content>
 
 </ion-card>
